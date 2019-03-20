@@ -1,6 +1,9 @@
 <?php
 require "header.php";
 ?>
+<head>
+<link rel="stylesheet" type="text/css" media="screen" href="./main.css">
+</head>
 <main>
     <div class=wrapper>
     
@@ -21,7 +24,7 @@ require "header.php";
           <h1 class="display-4">Welcome back.</h1>
           <p class="lead">You are now logged in.</p>
         </div>
-      </div>';
+        </div>';
     }
     ?>
     </div>
