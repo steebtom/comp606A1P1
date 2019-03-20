@@ -41,24 +41,42 @@ session_start();
                 <li class="nav-item">
                     <a class="nav-link" href="#">Our Team</a>
                 </li>
-                <li>
-                    
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Help</a>
                 </li>
             </ul>
 
-            <form action="./extra/loginex.php" method="post">
+            <?php
+            if(isset($_SESSION['userid']))
+            {   
+                echo '<form action="extra/logoutex.php" method="post">
+                <button type="submit" class="btn btn-outline-dark"name="logoutbtn" >Logout</button>
+                    </form>';
+            }
+            else
+            {
+                echo '<form action="./extra/loginex.php" method="post">
+                <input type="text" name="mailuid" placeholder="Username/Email">
+                <input type="password" name="pwd" placeholder="Password">
+                <button type="submit" class="btn btn-outline-dark" name="loginbtn">Login</button>
+                </form>
+                <a class="btn btn-default nva-link" href="signup.php">Signup</a>';
+            }
+            ?>
+
+            <!-- <form action="./extra/loginex.php" method="post">
                 <input type="text" name="mailuid" placeholder="Username/Email">
                 <input type="text" name="pwd" placeholder="Password">
                 <button type="submit" class="btn btn-outline-dark" name="loginbtn">Login</button>
                 <!-- <button type="submit" name="loginbtn">Login</button> -->
-            </form>
-            
+            <!-- </form>
             <a class="btn btn-default nva-link" href="signup.php">Signup</a>
+            
             <form action="extra/logoutex.php" method="post">
-            <button type="submit" class="btn btn-outline-dark"name="logoutbtn" >Logout</button>
+            <button type="submit" class="btn btn-outline-dark"name="logoutbtn" >Logout</button> -->
 
             <!-- <button type="submit" name="logoutbtn" >Logout</button> -->
-            </form>
+            <!-- </form> -->
 
         </div>
     </nav>

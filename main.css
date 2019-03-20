@@ -1,0 +1,17 @@
+.signuperr{
+    color: red;
+}
+.wrapper-main{
+    align-content: center;
+}
+.jumbotron{
+    height: 100vh;
+    background-color: gainsboro;
+}
+.signupinp{
+    padding-inline-end: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
